@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic News</title>
+    <title>Student News</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
@@ -20,21 +20,27 @@
             width: 200px;
             position: fixed;
             height: 100%;
+            opacity: 0; /* Set initial opacity to 0.5 to make the sidebar buttons invisible */
+            transition: opacity 0.7s ease-in; /* Add a transition for the 'opacity' property */
+        }
+
+                /* Add a class to trigger the fade-in effect for the sidebar */
+                .fade-in-sidebar {
+            opacity: 1;
         }
 
         .sidebar h1 {
             font-size: 24px;
         }
-
         .sidebar a {
             display: block;
             color: #fff;
             text-decoration: none;
-            padding: 10px;
+            padding: 20px;
             margin-bottom: 10px;
-            border: 1px solid #4ab17d;
-            background-color: #4ab17d;
-            transition: background-color 0.3s;
+            border: 1px solid #faf5f5;
+            background-color: #060606;
+            border-radius: 30px;
         }
 
         .sidebar a:hover {
@@ -43,23 +49,30 @@
         }
 
         .content {
-            margin-left: 220px; /* Adjust this value to match the sidebar width */
+            margin-left: 220px;
             padding: 20px;
         }
 
         header {
-            background-color: #4ab17d;
+            background-color: #333;
             color: #fff;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
         }
 
         h1 {
-            display: none; /* Hide the text title */
+            display: none;
         }
 
         .logo {
-            max-width: 150px; /* Adjust the width as needed */
+            max-width: 150px;
+            opacity: 0; /* Set initial opacity to 0 to make it invisible */
+            transition: opacity 1s ease-in; /* Add a transition for the 'opacity' property */
+        }
+
+        /* Add a class to trigger the fade-in effect when needed */
+        .fade-in-logo {
+            opacity: 1;
         }
 
         h2 {
@@ -108,64 +121,140 @@
             }
             100% {
                 transform: translateX(-100%);
-                opacity: 0; /* Fade out the ticker */
+                opacity: 0;
             }
         }
-    </style>
+
+        /* New search bar styles */
+        .search-bar {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .search-bar input[type="text"] {
+            width: 25%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .search-bar button {
+            background-color: #fff;
+            color: #080808;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #706464;
+            color: #fff;
+        }
+</style>
+
 </head>
 <body>
+    <!-- Add a form to submit search queries -->
+    <div class="search-bar">
+        <form action="search-results.html" method="get">
+            <input type="text" name="q" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
     <div class="sidebar">
+        <!-- Sidebar content -->
         <h1>Menu</h1>
-        <a href="politics.html">Politics</a>
-        <a href="sport.html">Sport</a>
-        <a href="world-news.html">World News</a>
-        <a href="climate-change.html">Climate Change</a>
+        <a href="BasicNews.html" class="fade-in-button">Home</a>
+        <a href="donate.html" class="fade-in-button">Donate</a>
+        <a href="politics.html" class="fade-in-button">Politics</a>
+        <a href="sport.html" class="fade-in-button">Sport</a>
+        <a href="worldnews.html" class="fade-in-button">World News</a>
+        <a href="climatechange.html" class="fade-in-button">Climate Change</a>
+        <!-- Use a "mailto" link for Contact Us -->
+        <a class="contact-link" href="mailto:basicnews@gmail.com">Contact Us</a>
     </div>
 
     <div class="content">
+        <!-- Content content -->
         <header>
-            <img class="logo" src="file:///Users/joshuarichardson/Downloads/Screenshot_2023-09-28_at_12.49.07-removebg-preview.png" alt="Basic News Logo">
+            <!-- Add the 'logo' class to your logo element -->
+            <img class="logo" src="/Users/joshuarichardson/Desktop/Student News Logo.png" alt="Student News Logo">
         </header>
 
         <div class="container">
-            <div class="article">
-                <h2>Breaking News</h2>
-                <h3><a href="headline1.html">Headline 1</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et urna eu nunc condimentum tincidunt.</p>
+            <!-- Add a div for the main content -->
+            <div class="main-content">
+                <h1>Main Content Title</h1>
+                <p>This is a site for students and apprentice journalists and writers to share their work and receive feedback.</p>
+                <p>The community is there to support and share ideas. This is the best way to showcase your work to potential employers.</p>
             </div>
 
-            <div class="article">
-                <h3><a href="headline2.html">Headline 2</a></h3>
-                <p>Phasellus facilisis ex eu tellus dictum, auctor egestas est malesuada. Sed eu fringilla ligula.</p>
+            <div class="container">
+                <div class="article">
+                    <h2>Breaking News</h2>
+                    <h3><a href="headline1.html">Headline 1</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et urna eu nunc condimentum tincidunt.</p>
+                </div>
+
+                <div class="article">
+                    <h3><a href="headline2.html">Headline 2</a></h3>
+                    <p>Phasellus facilisis ex eu tellus dictum, auctor egestas est malesuada. Sed eu fringilla ligula.</p>
+                </div>
+
+                <div class="article">
+                    <h3><a href="headline3.html">Headline 3</a></h3>
+                    <p>Vestibulum non arcu non odio tempus gravida sed nec felis. Fusce nec nisi nec libero suscipit viverra.</p>
+                </div>
+
+                <div class="article">
+                    <h3><a href="headline4.html">Headline 4</a></h3>
+                    <p>Vestibulum non arcu non odio tempus gravida sed nec felis. Fusce nec nisi nec libero suscipit viverra.</p>
+                </div>
+
+                <!-- Additional Article -->
+                <div class="article">
+                    <h3><a href="headline5.html">Headline 5</a></h3>
+                    <p>Additional content goes here.</p>
+                </div>
+                <div class="news-updates">
+                    <h2>Real-Time News Updates</h2>
+                    <ul id="news-list"></ul>
+                </div>
             </div>
 
-            <div class="article">
-                <h3><a href="headline3.html">Headline 3</a></h3>
-                <p>Vestibulum non arcu non odio tempus gravida sed nec felis. Fusce nec nisi nec libero suscipit viverra.</p>
+            <div class="news-ticker">
+                <p>This is a breaking news ticker.</p>
             </div>
-
-            <div class="article">
-                <h3><a href="headline4.html">Headline 4</a></h3>
-                <p>Vestibulum non arcu non odio tempus gravida sed nec felis. Fusce nec nisi nec libero suscipit viverra.</p>
-            </div>
-
-            <!-- Additional Article -->
-            <div class="article">
-                <h3><a href="headline5.html">Headline 5</a></h3>
-                <p>Additional content goes here.</p>
-            </div>
-            <div class="news-updates">
-                <h2>Real-Time News Updates</h2>
-                <ul id="news-list"></ul>
-            </div>
-        </div>
-
-        <div class="news-ticker">
-            <p>This is a breaking news ticker.</p>
         </div>
     </div>
+
+    <!-- Optional JavaScript to trigger the fade-in effect when the page loads -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const logo = document.querySelector('.logo');
+
+            // Add the 'fade-in-logo' class after a delay (e.g., 1 second) to trigger the fade-in effect
+            setTimeout(function() {
+                logo.classList.add('fade-in-logo');
+            }, 1000); // Adjust the delay as needed
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.querySelector('.sidebar');
+
+            // Add the 'fade-in-sidebar' class after a delay (e.g., 1 second) to trigger the fade-in effect
+            setTimeout(function() {
+                sidebar.classList.add('fade-in-sidebar');
+            }, 1000); // Adjust the delay as needed
+        });
+    </script>
 </body>
 </html>
+
+
     
 
 
